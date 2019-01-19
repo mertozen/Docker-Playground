@@ -5,3 +5,4 @@
 - docker network create elknetwork
 - docker run -d --name kibana --net elknetwork -p5601:5601 kibana:6.5.4
 - docker run -d --name elasticsearch --net elknetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.5.4
+- docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=1 postgres
